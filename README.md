@@ -1,4 +1,13 @@
 # Cryptode
 A cryptography framework written in pure rust.
 
-Currently cryptode is not installable and usable with package managers or dll files. Cryptode is currenly a set of many code snippets containing cryptographical functions. Soon the documentaton and releases will be released. 
+Just use in your Cargo.toml
+
+```rust
+[dependencies]
+cryptode = { git = "https://github.com/enginestein/Cryptode.git" }
+```
+
+And start coding!
+
+Documentation is available [here](https://enginestein.github.io/Cryptode/)
