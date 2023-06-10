@@ -1,0 +1,18 @@
+[package]
+name = "Cryptode"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+name = "Cryptode"
+path = "lib.rs"
+crate-type = ["cdylib"]
+
+
+[dependencies]
+lazy_static = "^1"
+maplit = "^1.0.1"
+lipsum = "0.9.0"
+num = "0.4.0"
+rulinalg = "^0.4"
+getrandom = {version =  "0.2", features = ["js"]}
