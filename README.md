@@ -11,3 +11,15 @@ cryptode = { git = "https://github.com/enginestein/Cryptode.git" }
 And start coding!
 
 Documentation is available [here](https://enginestein.github.io/Cryptode/)
+
+# Features
+
+- Written in pure rust for rust
+
+- Secure algorithms
+
+- Multiple approaches to select from
+
+- Advanced approaches
+
+- 50+ old and new algorithms
