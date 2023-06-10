@@ -1,0 +1,1628 @@
+<head>
+    
+
+
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Crytpode | Documentation</title>
+<meta name="description" content="A showcase of Simply Docs by MarketingPipeline built using Simple.CSS">
+    
+<link rel="stylesheet" href="../assets/style.css">
+
+    
+    
+<link rel="icon" href="../assets/images/favicon.png">
+<link rel="apple-touch-icon" href="../assets/images/favicon.png">
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+
+  </head>
+<header>
+<nav>
+  
+  <a href="../index.html">Home</a>
+  
+  <a href="../pages/documentation">Docs</a>
+  
+  <a href="https://github.com/enginestein/Cryptode"><svg class="icon" viewBox="0 0 32 32"><path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path></svg>Github</a>
+  
+</nav>
+
+      <h1>Documentation</h1>
+      <p>Documentation for Crytpode.</p>
+    </header>  
+
+
+
+<main>
+      <fieldset>
+        <!--
+        Every fieldset must contain a legend. IE barfs if it's not there.
+        It's no fun.
+        -->
+        <legend>Table Of Contents</legend>
+        
+      
+<ul>
+<li><a href="#about"><b>Sections</a></b><ul>
+<li><a href="#aes">AES Encryption</a></li>
+<li><a href="#b2b">Blake2b</a></li>
+<li><a href="#chacha">Chacha</a></li>
+<li><a href="hellman">Diffie Hellman</a></li>
+<li><a href="#fe">Encryption</a></li>
+<li><a href="#ke">Kerninghan</a></li>
+<li><a href="#me">Morse Code</a></li>
+<li><a href="#poly">Polybius</a></li>
+<li><a href="#rail">Railfence</a></li>
+<li><a href="#rot">Rot13</a></li>
+<li><a href="#salsa">Salsa</a></li>
+<li><a href="#sha3">SHA3</a></li>
+<li><a href="#sha256">SHA256</a></li>
+<li><a href="#tea">Tea</a></li>
+<li><a href="#rot132">Theoritcal Rot13</a></li>
+<li><a href="#te">Transposition</a></li>
+<li><a href="#uf">Utils</a></li>
+<li><a href="#xor">Xor</a></li>
+<li><a href="#kf">Keygen</a></li>
+<li><a href="#ae">Alphabet</a></li>
+<li><a href="#se">Substitute</a></li>
+<li><a href="#adf">ADFGVX</a></li>
+<li><a href="#aff">Affine</a></li>
+<li><a href="#ake">Autokey</a></li>
+<li><a href="#bacon">Baconian</a></li>
+<li><a href="#case">Caesar</a></li>
+<li><a href="#cte">Columnar Transposition</a></li>
+<li><a href="#fmorse">Fractionated Morse</a></li>
+<li><a href="#hill">Hill</a></li>
+<li><a href="#fair">Playfair</a></li>
+<li><a href="#poly2">Polybius Second Approach</a></li>
+<li><a href="#porta">Porta</a></li>
+<li><a href="#rail2">Railfence Second Approach</a></li>
+<li><a href="#rot133">Rot13 Second Approach</a></li>
+<li><a href="#scy">SCytale</a></li>
+<li><a href="#vig">Vigenere</a></li>
+<li><a href="#argon">Argon2 Macros</a></li>
+<li><a href="#bcr">Bcrypt</a></li>
+<li><a href="#ds">DS</a></li>
+<li><a href="#hmac">Hash Macros</a></li>
+<li><a href="#hmac2">Hmac</a></li>
+<li><a href="#kex">Keyexchange</a></li>
+<li><a href="#hmac4">Mac</a></li>
+<li><a href="#md5">MD5</a></li>
+<li><a href="#scr">Scrypt</a></li>
+<li><a href="#comb">Scryptsalsa208sha256</a></li>
+<li><a href="#sha1">SHA1</a></li>
+<li><a href="#sha512">SHA512</a></li>
+<li><a href="#sip">Siphash24</a></li>
+</ul>
+</fieldset>
+    
+<article>
+  <h1 id="about">Sections</h1>
+  <p>
+    Below are the sections of Cryptode framework, these sections contain different type of cryptological functions.
+  </p>
+  <h3 id="aes">AES Encryption</h3>
+  <p>This encryption technique is one of the safest encryption technique. Implemented code uses AES-128 variant which operates on 128-bit blocks to perform encryption and decryption.</p>
+  <h3>Example Usage</h3>
+  <md>
+    fn main() {
+      let plaintext: [Byte; AES_BLOCK_SIZE] = [
+        0x32, 0x88, 0x31, 0xe0, 0x43, 0x5a, 0x31, 0x37, 0xf6, 0x30, 0x98, 0x07, 0xa8, 0x8d, 0xa2, 0x34,
+      ];
+      let key: [Byte; AES_BLOCK_SIZE] = [
+          0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6, 0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c,
+      ];
+
+      let cipher = aes_encrypt(&plaintext, &key);
+      println!("Ciphertext: {:?}", cipher);
+
+      let decrypted = aes_decrypt(&cipher, &key);
+      println!("Decrypted: {:?}", decrypted);
+    }
+
+    fn aes_encrypt(plaintext: &[Byte; AES_BLOCK_SIZE], key: &[Byte; AES_BLOCK_SIZE]) -> [Byte; AES_BLOCK_SIZE] {
+      let mut state = plaintext.clone();
+      let mut expanded_key = key_expansion(key);
+
+      add_round_key(&mut state, &expanded_key[0..AES_BLOCK_SIZE]);
+
+      for round in 1..10 {
+        sub_bytes(&mut state);
+        shift_rows(&mut state);
+        mix_columns(&mut state);
+        add_round_key(&mut state, &expanded_key[round * AES_BLOCK_SIZE..(round + 1) * AES_BLOCK_SIZE]);
+      }
+
+      sub_bytes(&mut state);
+      shift_rows(&mut state);
+      add_round_key(&mut state, &expanded_key[10 * AES_BLOCK_SIZE..(10 + 1) * AES_BLOCK_SIZE]);
+
+      state
+    }
+
+    fn aes_decrypt(ciphertext: &[Byte; AES_BLOCK_SIZE], key: &[Byte; AES_BLOCK_SIZE]) -> [Byte; AES_BLOCK_SIZE] {
+      let mut state = ciphertext.clone();
+      let mut expanded_key = key_expansion(key);
+
+      add_round_key(&mut state, &expanded_key[10 * AES_BLOCK_SIZE..(10 + 1) * AES_BLOCK_SIZE]);
+      inv_shift_rows(&mut state);
+      inv_sub_bytes(&mut state);
+
+      for round in (1..10).rev() {
+        add_round_key(&mut state, &expanded_key[round * AES_BLOCK_SIZE..(round + 1) * AES_BLOCK_SIZE]);
+        inv_mix_columns(&mut state);
+        inv_shift_rows(&mut state);
+        inv_sub_bytes(&mut state);
+      }
+
+      add_round_key(&mut state, &expanded_key[0..AES_BLOCK_SIZE]);
+
+      state
+    }
+
+  </md>
+
+  <h3 id="b2b">Blake2b Encryption</h3>
+  <p>
+    The blake2b function takes three arguments:
+    <br>
+    <br>
+    m: The message to be hashed as a byte slice (&[u8]).
+    <br>
+    <br>
+    k: The key used for hashing as a byte slice (&[u8]).
+    <br>
+    <br>
+    nn: The desired size of the output hash in bytes as a u8.
+    <br>
+    <br>
+    The function returns a Vec<u8> containing the computed hash.
+    <br>
+    <br>
+    In the main function, we define a message and a key as byte slices. We also specify the desired output size in bytes using the output_size variable.
+    <br>
+    <br>
+    We then call the blake2b function with the message, key, and output_size as arguments, and store the resulting hash in the hash variable.
+    <br>
+    <br>
+    Finally, we print the hash to the console.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+	fn main() {
+    let message = b"Hello, World!";
+    let key = b"SecretKey";
+    let output_size = 32; // Output size in bytes
+
+    let hash = blake2b(message, key, output_size);
+
+    println!("Hash: {:?}", hash);
+    }
+
+  </md>
+
+  <h3 id="chacha">Chacha Encryption</h3>
+  <p>
+    The chacha20 function takes two arguments:
+    <br>
+    <br>
+    input: A reference to an array of 16 u32 values representing the input block.
+    output: A mutable reference to an array of 16 u32 values where the resulting output block will be stored.
+    The function applies the ChaCha20 encryption algorithm to the input block and stores the result in the output block.
+    <br>
+    <br>
+    In the main function, we define an input array containing 16 u32 values. You can provide your own input values here.
+    <br>
+    <br>
+    We also create an output array initialized with zeros to store the resulting output.
+    <br>
+    <br>
+    We then call the chacha20 function with the input and output arrays as arguments. The function modifies the output array to contain the encrypted result.
+    <br>
+    <br>
+    Finally, we print the output array to the console.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let input: [u32; 16] = [
+          0x61707865, 0x3320646e, 0x79622d32, 0x6b206574,
+          // Additional input values...
+      ];
+      let mut output: [u32; 16] = [0; 16];
+  
+      chacha20(&input, &mut output);
+  
+      println!("Output: {:?}", output);
+    }
+  
+
+  </md>
+
+  <h3 id="hellman">Diffie Hellman Encryption</h3>
+  <p>
+    generate_private_key: This function generates a random private key for a party. It takes the size of the prime number (p) as input and returns a random private key (x) within the range [2, p-2].
+    <br>
+    <br>
+    generate_public_key: This function calculates the public key (y) for a party given their private key (x) and the prime number (p). The public key is computed as y = g^x mod p, where g is a generator.
+    <br>
+    <br>
+    generate_shared_secret: This function calculates the shared secret (z) between two parties given their public and private keys. The shared secret is computed as z = y^x mod p.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    let prime_5 = PRIMES.get(&5).unwrap();
+    let private_key = generate_private_key(prime_5);
+
+    let generator = BigUint::from(2u8);
+    let private_key = generate_private_key(prime_5);
+    let public_key = generate_public_key(&generator, &private_key, prime_5);
+
+    // Assuming Alice's public key is `alice_public_key` and Bob's private key is `bob_private_key`
+    let shared_secret = generate_shared_secret(&alice_public_key, &bob_private_key, prime_5);
+
+  </md>
+
+  <h3 id="ef">Encryption File</h3>
+  <p>
+    The encrypt_bytes_to_string function encrypts the provided content using the given key and returns an encrypted string.
+    <br>
+    <br>
+    The encrypt_file_to_file_buffered function reads from an input file, encrypts the data using the key, and writes the encrypted content to an output file.
+    <br>
+    <br>
+    The decrypt_from_string function decrypts the provided ciphertext using the given key and returns the decrypted string.
+    <br>
+    <br>
+    The decrypt_file_to_file_buffered function reads from an encrypted input file, decrypts the content using the key, and writes the decrypted data to an output file.
+    <br>
+    <br>
+    The write_fernet_key_to_file function writes the provided key to a file named ".secret.key". If the file already exists, it asks the user whether to use the existing key or exit the program
+    <br>
+    <br>
+    The read_fernet_key_from_file function reads the key from the ".secret.key" file. If the file doesn't exist, it exits the program.
+
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      // Encrypt bytes to string
+      let key = "your_key";
+      let content = b"Hello, world!";
+      let encrypted_string = encrypt_bytes_to_string(key, content);
+      println!("Encrypted string: {}", encrypted_string);
+  
+      // Encrypt file to file (buffered)
+      let input_file = File::open("input.txt").expect("Failed to open input file");
+      let output_file = File::create("output.txt").expect("Failed to create output file");
+      let reader = BufReader::new(input_file);
+      let writer = BufWriter::new(output_file);
+      encrypt_file_to_file_buffered(key, reader, writer).expect("Failed to encrypt file");
+  
+      // Decrypt from string
+      let ciphertext = "encrypted_string";
+      let decrypted_string = decrypt_from_string(key, ciphertext).expect("Failed to decrypt string");
+      println!("Decrypted string: {}", decrypted_string);
+  
+      // Decrypt file to file (buffered)
+      let input_file = File::open("encrypted_file.txt").expect("Failed to open encrypted file");
+      let output_file = File::create("decrypted_file.txt").expect("Failed to create decrypted file");
+      let reader = BufReader::new(input_file);
+      let writer = BufWriter::new(output_file);
+      decrypt_file_to_file_buffered(key, reader, writer).expect("Failed to decrypt file");
+  
+      // Write fernet key to file
+      let key = "your_key".to_owned();
+      write_fernet_key_to_file(key);
+  
+      // Read fernet key from file
+      let key = read_fernet_key_from_file();
+      println!("Fernet key: {}", key);
+    }
+
+  </md>
+
+  <h3 id="ke">Kerninghan Encryption</h3>
+  <p>
+    The kerninghan function takes an unsigned integer n as input and returns the count of set bits.
+    <br>
+    <br>
+    It initializes a variable count to keep track of the number of set bits.
+    
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let number = 123456789;
+      let count = kerninghan(number);
+      println!("Number of set bits in {}: {}", number, count);
+    }
+
+  </md>
+
+  <h3 id="me">Morse Code Encryption</h3>
+  <p>
+    The encode function takes a message as input and returns the Morse code representation of the message as a string.
+    <br>
+    <br>
+    The decode function takes an encoded Morse code string as input and attempts to decode it back to the original message.
+    
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let message = "HELLO WORLD";
+      let encoded = encode(message);
+      let decoded = decode(&encoded).unwrap();
+  
+      println!("Original Message: {}", message);
+      println!("Encoded Message: {}", encoded);
+      println!("Decoded Message: {}", decoded);
+    }
+
+  </md>
+
+  <h3 id="poly">Polybius Encryption</h3>
+  <p>
+    The encode_ascii function takes a string of ASCII characters as input and returns an encoded version of the string as a string of numbers.
+    <br>
+    <br>
+    The decode_ascii function takes an encoded string as input and attempts to decode it back to the original ASCII message.
+    
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let message = "Hello, World!";
+      let encoded = encode_ascii(message);
+      let decoded = decode_ascii(&encoded);
+  
+      println!("Original Message: {}", message);
+      println!("Encoded Message: {}", encoded);
+      println!("Decoded Message: {}", decoded);
+    }  
+
+  </md>
+
+  <h3 id="rail">Railfence Encryption</h3>
+  <p>
+    The rail_fence_encrypt function takes a plain text string and a key (number of rails) as input and returns the encrypted version of the plain text as a string.
+    <br>
+    <br>
+    The rail_fence_decrypt function takes an encrypted cipher text string and the key (number of rails) as input and returns the decrypted version of the cipher text as a string.
+    
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let plain_text = "Hello, World!";
+      let key = 3;
+  
+      let encrypted = rail_fence_encrypt(plain_text, key);
+      let decrypted = rail_fence_decrypt(&encrypted, key);
+  
+      println!("Plain Text: {}", plain_text);
+      println!("Encrypted Text: {}", encrypted);
+      println!("Decrypted Text: {}", decrypted);
+    }
+  
+
+  </md>
+
+  <h3 id="rot">Rot13 Encryption</h3>
+  <p>
+    The rot13 function takes a text string as input and returns the encrypted version of the text as a string.
+    <br>
+    <br>
+    The character c is matched against specific ranges using the match expression:
+    <br>
+    <br>
+    If c is in the range 'A'..='M', which represents the first half of the uppercase alphabet, it is shifted by adding 13 to its ASCII value. The resulting value is then casted back to a character.
+    <br>
+    <br>
+    If c is in the range 'N'..='Z', which represents the second half of the uppercase alphabet, it is shifted by subtracting 13 from its ASCII value. The resulting value is then casted back to a character.
+    <br>
+    <br>
+    If c doesn't fall into any of the specified ranges, it remains unchanged.
+    
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let text = "Hello, World!";
+      let encrypted = rot13(text);
+  
+      println!("Original Text: {}", text);
+      println!("Encrypted Text: {}", encrypted);
+    }
+
+  </md>
+
+  <h3 id="salsa">Salsa Encryption</h3>
+  <p>
+    The salsa20 function takes an input array of 16 u32 values (input) and an output array of 16 u32 values (output) as parameters. It performs the Salsa20 encryption algorithm on the input and stores the result in the output array.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let input: [u32; 16] = [
+          0x00000001, 0x00000023, 0x00000456, 0x00000789,
+          0x0000009A, 0x000000BC, 0x00000DEF, 0x000000FE,
+          0x00000000, 0x00000000, 0x00000000, 0x00000000,
+          0x00000000, 0x00000000, 0x00000000, 0x00000000,
+      ];
+  
+      let mut output: [u32; 16] = [0; 16];
+  
+      salsa20(&input, &mut output);
+  
+      println!("Input: {:?}", input);
+      println!("Output: {:?}", output);
+    }
+
+  </md>
+
+  <h3 id="sha3">SHA3 Encryption</h3>
+  <p>
+    The sha3! macro is used to generate specific hash functions based on the Keccak algorithm. It takes two arguments: the name of the hash function and the desired output size in bits.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let message = b"Hello, world!";
+      let hash = sha3_256(message);
+  
+      println!("Message: {}", String::from_utf8_lossy(message));
+      println!("SHA3-256 Hash: {:x}", hash);
+    }
+  
+
+  </md>
+
+  <h3 id="sha256">SHA256 Encryption</h3>
+  <p>
+    SHA256 is a struct that represents the SHA-256 hashing state. It contains the internal buffer, the length of the input data, the current hash values, working variables, a flag indicating if the hashing is finalized, and a round array.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    let mut hasher = SHA256::new_default();
+    hasher.update(&data);
+    let hash = hasher.get_hash();  
+
+  </md>
+
+  <h3 id="tea">TEA Encryption</h3>
+  <p>
+    Tiny Encryption Algorithm (TEA), a symmetric block cipher. It includes functions for encrypting and decrypting data using TEA.
+    <br>
+    <br>
+    The tea_encrypt function takes the plain text and key as input and returns the encrypted data as a Vec<u8>. Similarly, the tea_decrypt function takes the ciphertext and key as input and returns the decrypted data as a Vec<u8>.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let plaintext = b"Hello, World!"; // Plain text to encrypt
+  
+      let key = b"This is a key!"; // Encryption key
+      let ciphertext = tea_encrypt(plaintext, key); // Encrypt the plaintext using TEA
+      println!("Ciphertext: {:?}", ciphertext);
+  
+      let decrypted_text = tea_decrypt(&ciphertext, key); // Decrypt the ciphertext using TEA
+      println!("Decrypted text: {:?}", decrypted_text);
+    }
+  
+  </md>
+
+  <h3 id="rot132">Theoretical Rot13 Encryption</h3>
+  <p>
+    This is another approach of rot13 encryption, a bit more simpler with decryption.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let plaintext = "Hello, World!"; // Plain text to encrypt
+      let ciphertext = theoretical_rot13(plaintext); // Encrypt the plaintext using ROT13
+      println!("Ciphertext: {}", ciphertext);
+      
+      let decrypted_text = theoretical_rot13(&ciphertext); // Decrypt the ciphertext using ROT13
+      println!("Decrypted text: {}", decrypted_text);
+    }
+  
+  </md>
+
+  <h3 id="te">Transposition Encryption</h3>
+  <p>
+    The transposition function takes three parameters: decrypt_mode (a boolean indicating whether to encrypt or decrypt), msg (the message to encrypt or decrypt), and key (the key used for the transposition).
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let message = "Hello, World!"; // Message to encrypt or decrypt
+      let key = "KEY"; // Key used for transposition
+  
+      let encrypted_message = transposition(false, message, key); // Encrypt the message using the transposition cipher
+      println!("Encrypted Message: {}", encrypted_message);
+  
+      let decrypted_message = transposition(true, &encrypted_message, key); // Decrypt the message using the transposition cipher
+      println!("Decrypted Message: {}", decrypted_message);
+    }
+  
+  </md>
+
+  <h3 id="uf">Utility File</h3>
+  <p>
+    Just some Utility functions
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let file_name = "example.txt"; // Name of the file
+  
+      if warn_if_file_exists(file_name) {
+          // File does not exist or user confirmed overwrite
+          println!("Writing content to {}...", file_name);
+          // Write your file writing logic here
+      } else {
+          println!("File not overwritten.");
+      }
+  
+      let answer = ask_bool("Do you want to continue?", true);
+      match answer {
+          Some(true) => println!("Continuing..."),
+          Some(false) => println!("Exiting..."),
+          None => println!("Invalid input, assuming default."),
+      }
+    }
+
+  </md>
+
+  <h3 id="xor">XOR Encryption</h3>
+  <p>
+    The xor_bytes function takes a slice of bytes (text) and a single-byte key (key). It uses the iter method to iterate over each byte in text, applies the XOR operation (^) with the key, and collects the results into a new Vec<u8>. The function returns the XORed bytes.
+    <br>
+    <br>
+    The xor function is a convenience function that takes a string (text) and a single-byte key (key). It converts the string to bytes using as_bytes and calls xor_bytes to perform the XOR operation.
+    <br>
+    <br>
+    In the example code, the original text is XORed with the key using xor_bytes, and the result is converted back to a string using String::from_utf8_lossy. The XORed text is then printed.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let text = "Hello, world!"; // Text to be XORed
+      let key = 0xAB; // XOR key
+  
+      let xored_bytes = xor_bytes(text.as_bytes(), key);
+      let xored_text = String::from_utf8_lossy(&xored_bytes);
+  
+      println!("Original text: {}", text);
+      println!("XOR key: 0x{:02X}", key);
+      println!("XORed text: {}", xored_text);
+  
+      let decrypted_bytes = xor_bytes(&xored_bytes, key);
+      let decrypted_text = String::from_utf8_lossy(&decrypted_bytes);
+  
+      println!("Decrypted text: {}", decrypted_text);
+  }
+  
+  </md>
+
+  <h3 id="ae">Alphabet Encryption</h3>
+  <p>
+    find_position(&self, c: char) -> Option<usize>: This method takes a character c and returns the position (index) of that character in the alphabet. If the character is not found, it returns None.
+    <br>
+    <br>
+    get_letter(&self, index: usize, is_uppercase: bool) -> char: Given an index and a flag indicating whether the letter should be uppercase, this method returns the corresponding letter from the alphabet.
+    <br>
+    <br>
+    modulo(&self, i: isize) -> usize: This method performs modulo arithmetic on a given value i using the length of the alphabet. It ensures that the result is a valid index within the alphabet.
+    <br>
+    <br>
+    is_valid(&self, text: &str) -> bool: This method checks if all characters in the provided text are valid characters in the alphabet.
+    <br>
+    <br>
+    scrub(&self, text: &str) -> String: This method removes any characters from the text that are not valid characters in the alphabet and returns a new string containing only the valid characters
+    <br>
+    <br>
+    multiplicative_inverse(&self, a: isize) -> Option<usize>: This method calculates the multiplicative inverse of a given value a modulo the length of the alphabet. It returns the inverse as an Option<usize>, or None if the inverse does not exist.
+    <br>
+    <br>
+    length(&self) -> usize: This method returns the length of the alphabet.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let standard_alphabet = Standard;
+      let alphanumeric_alphabet = Alphanumeric;
+      let playfair_alphabet = Playfair;
+  
+      let position = standard_alphabet.find_position('a');
+      println!("Position of 'a' in the standard alphabet: {:?}", position);
+  
+      let letter = alphanumeric_alphabet.get_letter(10, true);
+      println!("Letter at index 10 in the alphanumeric alphabet (uppercase): {}", letter);
+  
+      let modulo_result = playfair_alphabet.modulo(30);
+      println!("Modulo result of 30 in the playfair alphabet: {}", modulo_result);
+  
+      let is_valid_text = standard_alphabet.is_valid("Hello, world!");
+      println!("Is 'Hello, world!' a valid text in the standard alphabet? {}", is_valid_text);
+  
+      let scrubbed_text = alphanumeric_alphabet.scrub("abc123xyz!@#");
+      println!("Scrubbed text in the alphanumeric alphabet: {}", scrubbed_text);
+  
+      let multiplicative_inverse = playfair_alphabet.multiplicative_inverse(7);
+      println!("Multiplicative inverse of 7 in the playfair alphabet: {:?}", multiplicative_inverse);
+  
+      let alphabet_length = standard_alphabet.length();
+      println!("Length of the standard alphabet: {}", alphabet_length);
+    }
+  
+  </md>
+
+  <h3 id="kf">Keygen File</h3>
+  <p>
+    keyed_alphabet: This function generates a modified alphabet based on a given key and alphabet type. It takes three arguments: key (the key string), alpha_type (the type of alphabet to use), and to_uppercase (a boolean indicating whether the generated alphabet should be in uppercase). The function returns a string representing the modified alphabet.
+    <br>
+    <br>
+    columnar_key: This function generates a columnar key from a given keystream. It takes one argument: keystream (the string representing the keystream). The function returns a vector of tuples, where each tuple contains a character and an empty vector.
+    <br>
+    <br>
+    polybius_square: This function generates a Polybius square based on a given key, column IDs, and row IDs. It takes three arguments: key (the key string), column_ids (an array of 6 characters representing column identifiers), and row_ids (an array of 6 characters representing row identifiers). The function returns a HashMap that maps string coordinates to characters.
+    <br>
+    <br>
+    playfair_table: This function generates a Playfair cipher table based on a given keystream. It takes one argument: keystream (the string representing the keystream). The function returns a tuple containing two arrays of strings: ([String; 5], [String; 5]). Each array represents a row or column in the Playfair table.
+    <br>
+    <br>
+    cyclic_keystream: This function generates a cyclic keystream based on a given key and message. It takes two arguments: key (the string representing the key) and message (the string representing the message). The function returns a string representing the cyclic keystream.
+    <br>
+    <br>
+    concatonated_keystream: This function generates a concatenated keystream based on a given key and message. It takes two arguments: key (the string representing the key) and message (the string representing the message
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    let key = "lemon";
+    let modified_alphabet = keyed_alphabet(key, &STANDARD, false);
+    println!("{}", modified_alphabet);
+
+    let keystream = "zebras";
+    let columnar_key = columnar_key(keystream);
+    for (ch, vec) in columnar_key {
+      println!("Character: {}", ch);
+      println!("Vector: {:?}", vec);
+    }
+
+    let key = "abcdefghijklmnopqrstuvwxyz0123456789";
+    let column_ids = ['a', 'b', 'c', 'd', 'e', 'f'];
+    let row_ids = ['a', 'b', 'c', 'd', 'e', 'f'];
+    let polybius_table = polybius_square(key, &column_ids, &row_ids);
+    println!("{:?}", polybius_table);
+
+    let keystream = "playfairexample";
+    let (rows, cols) = playfair_table(keystream);
+    println!("{:?}", rows);
+    println!("{:?}", cols);
+
+    let key = "lemon";
+    let message = "We are under seige!";
+    let keystream = cyclic_keystream(key, message);
+    println!("{}", keystream);
+  
+  </md>
+
+  <h3 id="se">Substitution Encryption</h3>
+  <p>
+    shift_substitution:
+
+    This function performs a shift substitution cipher on the input text.
+    It takes two arguments: text (the input text to be encrypted) and calc_index (a closure that calculates the new index based on the current index).
+    The function iterates over each character in the input text.
+    It finds the position of the character in the STANDARD alphabet using alphabet::STANDARD.find_position(c).
+    If the character is found in the alphabet, it calculates the new index using the closure calc_index and retrieves the corresponding letter using alphabet::STANDARD.get_letter(si, c.is_uppercase()).
+    If the character is not found in the alphabet, it appends the character as is.
+    The function returns the substituted text.
+
+    <br>
+    <br>
+
+    key_substitution:
+
+    This function performs a key substitution cipher on the input text using a keystream.
+    It takes three arguments: text (the input text to be encrypted), keystream (the keystream used for substitution), and calc_index (a closure that calculates the new index based on the current indexes of the text and keystream characters).
+    The function iterates over each character in the input text.
+    It finds the position of the text character in the STANDARD alphabet using alphabet::STANDARD.find_position(tc).
+    If the text character is found in the alphabet, it checks if there is a character available in the keystream_iter.
+    If there is a keystream character, it finds the position of the keystream character in the STANDARD alphabet using alphabet::STANDARD.find_position(*kc).
+    It then calculates the new index using the closure calc_index and retrieves the corresponding letter using alphabet::STANDARD.get_letter(si, tc.is_uppercase()).
+    If the keystream character is not found in the alphabet, it throws a panic indicating a non-alphabetic symbol in the keystream.
+    If there is no keystream character available, it throws a panic indicating that the keystream is not large enough for full substitution of the message.
+    The function returns the substituted text.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    let text = "Hello, World!";
+    let new_text = shift_substitution(text, |pos| (pos + 3) % 26);
+    println!("{}", new_text);
+
+    let text = "Hello, World!";
+    let keystream = "lemon";
+    let new_text = key_substitution(text, keystream, |ti, ki| (ti + ki) % 26);
+    println!("{}", new_text);
+  
+  </md>
+
+  <h3 id="adf">ADFGVX Encryption</h3>
+  <p>
+    The ADFGVX struct has two fields: polybius_cipher of type Polybius and columnar_cipher of type ColumnarTransposition. These fields represent the two steps involved in the ADFGVX cipher.
+    <br>
+    <br>
+    The Polybius cipher is used for the first step of encryption and decryption in the ADFGVX cipher. It maps each character of the input message to a pair of ADFGVX characters based on a Polybius square. The Polybius struct is instantiated with the key, ADFGVX row characters, and ADFGVX column characters.
+    <br>
+    <br>
+    The ColumnarTransposition cipher is used for the second step of encryption and decryption in the ADFGVX cipher. It performs a columnar transposition on the output of the Polybius cipher. The ColumnarTransposition struct is instantiated with the columnar key and an optional columnar padding character.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    // Create an instance of ADFGVX cipher with a key
+    let key = ("POLYBIUSKEY".to_string(), "COLUMNARKEY".to_string(), Some('X'));
+    let adfgvx_cipher = ADFGVX::new(key);
+    
+    // Encrypt a message
+    let plaintext = "HELLO";
+    let ciphertext = adfgvx_cipher.encrypt(plaintext).unwrap();
+    println!("Ciphertext: {}", ciphertext);
+    
+    // Decrypt the ciphertext
+    let decrypted_text = adfgvx_cipher.decrypt(&ciphertext).unwrap();
+    println!("Decrypted text: {}", decrypted_text);
+  
+  </md>
+
+  <h3 id="aff">Affine Encryption</h3>
+  <p>
+    The Affine struct represents the Affine cipher, which is a substitution cipher that combines the encryption steps of the Caesar cipher and the Multiplicative cipher.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    // Create an instance of Affine cipher with a key
+    let key = (5, 8);
+    let affine_cipher = Affine::new(key);
+
+    // Encrypt a message
+    let plaintext = "HELLO";
+    let ciphertext = affine_cipher.encrypt(plaintext).unwrap();
+    println!("Ciphertext: {}", ciphertext);
+
+    // Decrypt the ciphertext
+    let decrypted_text = affine_cipher.decrypt(&ciphertext).unwrap();
+    println!("Decrypted text: {}", decrypted_text);
+  
+  </md>
+
+
+  <h3 id="ake">Autokey Encryption</h3>
+  <p>
+    The encrypt method takes a message as input, performs encryption using the Autokey cipher, and returns the ciphertext as a Result<String, &'static str>. It encrypts the message by applying the key substitution using the key_substitution function from the substitute module. The key substitution applies the formula (mi + ki) mod 26 to each character's index in the STANDARD alphabet, where mi is the original index and ki is the index of the corresponding character in the concatenated keystream generated from the key and the message. The resulting index is converted back to the corresponding letter using the modulo function from the alphabet::STANDARD alphabet.
+    <br>
+    <br>
+    The decrypt method takes a ciphertext as input, performs decryption using the Autokey cipher, and returns the plaintext as a Result<String, &'static str>. It decrypts the ciphertext by iterating over each character in the ciphertext. For each character, it checks if the character is present in the STANDARD alphabet. If it is, it performs the decryption by subtracting the index of the corresponding character in the keystream (obtained from the keystream vector) from the index of the current character in the STANDARD alphabet. The result is then converted back to the corresponding letter using the get_letter function from the alphabet::STANDARD alphabet. The decrypted character is appended to the plaintext string. Additionally, the decrypted character is added to the keystream vector, an
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    // Create an instance of Autokey cipher with a key
+    let key = "KEY";
+    let autokey_cipher = Autokey::new(key.to_string());
+    
+    // Encrypt a message
+    let plaintext = "HELLO";
+    let ciphertext = autokey_cipher.encrypt(plaintext).unwrap();
+    println!("Ciphertext: {}", ciphertext);
+    
+    // Decrypt the ciphertext
+    let decrypted_text = autokey_cipher.decrypt(&ciphertext).unwrap();
+    println!("Decrypted text: {}", decrypted_text);
+  
+  </md>
+
+  <h3 id="bacon">Baconian Encryption</h3>
+  <p>
+    The get_code function takes a boolean flag use_distinct_alphabet and a key as input and returns the Baconian code for the given key. It first converts the key to uppercase and checks if the use_distinct_alphabet flag is set. If the flag is set and the key is "J" or "U", it substitutes them with "I" and "V" respectively. Then, it retrieves the Baconian code from the CODE_MAP using the modified key and returns it.
+    <br>
+    <br>
+    The get_key function takes a Baconian code as input and returns the corresponding letter key. It iterates over the CODE_MAP and checks for a match between the code and the values in the map. When a match is found, it adds the corresponding key to the key string and returns it.
+    <br>
+    <br>
+    The Baconian struct represents the Baconian cipher and implements the Cipher trait. It has two fields: use_distinct_alphabet (a boolean flag indicating whether to use a distinct alphabet) and decoy_text (a string representing the decoy text used for encryption).
+    <br>
+    <br>
+    The encrypt method takes a message as input, performs encryption using the Baconian cipher, and returns the ciphertext as a Result<String, &'static str>. It first checks if the length of the message multiplied by CODE_LEN (the length of a Baconian code) exceeds the available space in the decoy_text. If it does, it returns an error indicating that the message is too long for the supplied decoy text. Otherwise, it converts each character of the message to its Baconian code using the get_code function and collects the codes into a secret string.
+    <br>
+    <br>
+    The decrypt method takes a message as input, performs decryption using the Baconian cipher, and returns the plaintext as a Result<String, &'static str>. It filters out non-alphabetic characters from the message and maps each alphabetic character to either 'A' or 'B' depending on whether it corresponds to an italic character or not. Then, it iterates over the ciphertext and extracts the Baconian codes by appending characters until the code length is reached. For each code, it retrieves the corresponding key using the get_key function and appends it to the plaintext string.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let baconian = Baconian::new((true, None)); // Use distinct alphabet and no decoy text
+  
+      let message = "HELLO";
+      let ciphertext = baconian.encrypt(message).unwrap();
+      println!("Ciphertext: {}", ciphertext);
+  
+      let decrypted_message = baconian.decrypt(&ciphertext).unwrap();
+      println!("Decrypted message: {}", decrypted_message);
+    }
+  
+  </md>
+
+  <h3 id="cte">Columnar Transposition Encryption</h3>
+  <p>
+    The encrypt method takes a message as input, performs encryption using the Columnar Transposition cipher, and returns the ciphertext as a Result<String, &'static str>. It first checks if the message contains the null_char (if it exists). If it does, an error is returned indicating that the message contains null characters.
+    <br>
+    <br>
+    The decrypt method takes a ciphertext as input, performs decryption using the Columnar Transposition cipher, and returns the plaintext as a Result<String, &'static str>. It begins by creating a clone of the derived key.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let key = ("SECRETKEY".to_string(), Some('_')); // Create a key with the keystream "SECRETKEY" and null character '_'
+      let columnar = ColumnarTransposition::new(key);
+  
+      let message = "HELLO";
+      let ciphertext = columnar.encrypt(message).unwrap();
+      println!("Ciphertext: {}", ciphertext);
+  
+      let decrypted_message = columnar.decrypt(&ciphertext).unwrap();
+      println!("Decrypted message: {}", decrypted_message);
+    }
+  
+  </md>
+
+  <h3 id="case">Caesar Encryption</h3>
+  <p>
+    The encrypt method takes a message as input, performs encryption using the Caesar cipher, and returns the ciphertext as a Result<String, &'static str>. It uses the shift_substitution function from the substitute module to substitute each character in the message with a shifted character. The shift value used for substitution is obtained by adding the current character's index to the self.shift value and applying modular arithmetic with the size of the alphabet::STANDARD. The resulting ciphertext is returned.
+    <br>
+    <br>
+    The decrypt method takes a ciphertext as input, performs decryption using the Caesar cipher, and returns the plaintext as a Result<String, &'static str>. It uses the shift_substitution function from the substitute module in a similar way to the encrypt method. However, it subtracts the self.shift value from the current character's index during substitution to reverse the encryption process and obtain the original plaintext.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let caesar = Caesar::new(3); // Create a Caesar cipher with a shift of 3
+  
+      let message = "HELLO";
+      let ciphertext = caesar.encrypt(message).unwrap();
+      println!("Ciphertext: {}", ciphertext);
+  
+      let decrypted_message = caesar.decrypt(&ciphertext).unwrap();
+      println!("Decrypted message: {}", decrypted_message);
+    }
+  
+  </md>
+
+  <h3 id="fmorse">Franctionated Morse Encryption</h3>
+  <p>
+    The encrypt method takes a message as input, performs encryption using the Fractionated Morse cipher, and returns the ciphertext as a Result<String, &'static str>. It first encodes the message into Morse code using the encode_to_morse private method. If any character in the message is not supported by the Morse code encoding, an error is returned.
+    <br>
+    <br>
+    The decrypt method takes a cipher_text as input, performs decryption using the Fractionated Morse cipher, and returns the plaintext as a Result<String, &'static str>. It first checks if the cipher_text contains any non-alphabetic symbols. If it does, an error is returned.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let key = "KEY"; // Create a key
+      let fractionated_morse = FractionatedMorse::new(key.to_string());
+  
+      let message = "HELLO";
+      let ciphertext = fractionated_morse.encrypt(message).unwrap();
+      println!("Ciphertext: {}", ciphertext);
+  
+      let decrypted_message = fractionated_morse.decrypt(&ciphertext).unwrap();
+      println!("Decrypted message: {}", decrypted_message);
+    }
+  
+  </md>
+
+  <h3 id="hill">Hill Encryption</h3>
+  <p>
+    The encrypt method takes a message as input, performs encryption using the Hill cipher, and returns the ciphertext as a Result<String, &'static str>. It calls the transform_message private method to transform the message using the key matrix.
+    <br>
+    <br>
+    The decrypt method takes a ciphertext as input, performs decryption using the Hill cipher, and returns the plaintext as a Result<String, &'static str>. It calculates the inverse key using the calc_inverse_key private method and then calls the transform_message method to transform the ciphertext using the inverse key.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let key = Matrix::new(2, 2, vec![1, 2, 3, 4]); // Create a key matrix
+      let hill = Hill::new(key);
+  
+      let message = "HELLO";
+      let ciphertext = hill.encrypt(message).unwrap();
+      println!("Ciphertext: {}", ciphertext);
+  
+      let decrypted_message = hill.decrypt(&ciphertext).unwrap();
+      println!("Decrypted message: {}", decrypted_message);
+    }
+  
+  </md>
+
+  <h3 id="fair">Playfair Encryption</h3>
+  <p>
+    The encrypt method takes a message as input, performs encryption using the Playfair cipher, and returns the ciphertext as a Result<String, &'static str>. It first checks if the message contains only alphabetic characters using the is_valid method from the Alphabet trait. If the message contains non-alphabetic characters, it returns an error.
+    <br>
+    <br>
+    The decrypt method takes a ciphertext as input, performs decryption using the Playfair cipher, and returns the plaintext as a Result<String, &'static str>. It first checks if the ciphertext contains only alphabetic characters using the is_valid method from the Alphabet trait. If the ciphertext contains non-alphabetic characters, it returns an error.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let key = ("KEY".to_string(), Some('Z')); // Create a key tuple
+      let playfair = Playfair::new(key);
+  
+      let message = "HELLO";
+      let ciphertext = playfair.encrypt(message).unwrap();
+      println!("Ciphertext: {}", ciphertext);
+  
+      let decrypted_message = playfair.decrypt(&ciphertext).unwrap();
+      println!("Decrypted message: {}", decrypted_message);
+    }
+  
+  </md>
+
+  <h3 id="poly2">Polybius Second Approach Encryption</h3>
+  <p>
+    The encrypt method takes a message as input, performs encryption using the Polybius cipher, and returns the ciphertext as a Result<String, &'static str>. It maps each character of the message to its corresponding key in the Polybius square. If a character is found in the square, its corresponding key is used; otherwise, the character itself is used. The mapped characters are collected into a String and returned as the ciphertext.
+    <br>
+    <br>
+    The decrypt method takes a ciphertext as input, performs decryption using the Polybius cipher, and returns the plaintext as a Result<String, &'static str>. It iterates over the characters of the ciphertext and distinguishes between the characters that are part of the Polybius square and the rest of the characters.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let key = ("KEY".to_string(), ['A', 'B', 'C', 'D', 'E', 'F'], ['1', '2', '3', '4', '5', '6']); // Create a key tuple
+      let polybius = Polybius::new(key);
+  
+      let message = "HELLO";
+      let ciphertext = polybius.encrypt(message).unwrap();
+      println!("Ciphertext: {}", ciphertext);
+  
+      let decrypted_message = polybius.decrypt(&ciphertext).unwrap();
+      println!("Decrypted message: {}", decrypted_message);
+    }
+  
+  </md>
+
+  <h3 id="porta">Porta Encryption</h3>
+  <p>
+    The encrypt method takes a message as input, performs encryption using the Porta cipher, and returns the ciphertext as a Result<String, &'static str>. It uses the key_substitution function from the substitute module to perform the substitution. It generates a cyclic keystream based on the key using the cyclic_keystream function. The key_substitution function performs substitution by mapping each character of the message and the corresponding keystream character to an index in the SUBSTITUTION_TABLE array and retrieving the value at that index. The mapped characters are collected into a String and returned as the ciphertext.
+    <br>
+    <br>
+    The decrypt method takes a ciphertext as input, performs decryption using the Porta cipher, and returns the plaintext as a Result<String, &'static str>. It simply calls the encrypt method with the ciphertext since the Porta cipher uses the same encryption and decryption algorithm.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let key = "KEY".to_string(); // Create a key
+      let porta = Porta::new(key);
+  
+      let message = "HELLO";
+      let ciphertext = porta.encrypt(message).unwrap();
+      println!("Ciphertext: {}", ciphertext);
+  
+      let decrypted_message = porta.decrypt(&ciphertext).unwrap();
+      println!("Decrypted message: {}", decrypted_message);
+    }
+  
+  </md>
+
+  <h3 id="rail2">Railfence Second Approach Encryption</h3>
+  <p>
+    The encrypt method takes a message as input, performs encryption using the Railfence cipher, and returns the ciphertext as a Result<String, &'static str>. If the number of rails is 1, it returns the message as it is without encryption. Otherwise, it creates a table represented as a 2D vector (table) with dimensions rails x message.len(). Each element of the table represents a character position and whether it is part of the encrypted message. The calc_current_rail method is used to calculate the current rail based on the column position and the total number of rails. It iterates over the characters of the message, determines the rail for each character, and updates the corresponding position in the table to mark it as part of the encrypted message. Finally, it flattens the table, filters out the non-element positions, extracts the elements, and collects them into a String, which is returned as the ciphertext.
+    <br>
+    <br>
+    The decrypt method takes a ciphertext as input, performs decryption using the Railfence cipher, and returns the plaintext as a Result<String, &'static str>. If the number of rails is 1, it returns the ciphertext as it is without decryption. Otherwise, it creates an empty table with the same dimensions as in the encryption process. It then iterates over the table columns and calculates the corresponding rail using the calc_current_rail method, marking the positions in the table as elements. It then iterates over the table rows and fills the elements with the characters from the ciphertext in the order they appear. Once the table is populated, it iterates over the columns again, calculates the corresponding rail, and retrieves the character from the table to form the decrypted message. The decrypted message is returned as a String.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let rails = 3; // Number of rails
+      let railfence = Railfence::new(rails);
+  
+      let message = "HELLO";
+      let ciphertext = railfence.encrypt(message).unwrap();
+      println!("Ciphertext: {}", ciphertext);
+  
+      let decrypted_message = railfence.decrypt(&ciphertext).unwrap();
+      println!("Decrypted message: {}", decrypted_message);
+    }
+  
+  </md>
+  
+
+  <h3 id="rot133">ROT13 Second Approach Encryption</h3>
+  <p>
+    The encrypt function takes a message as input, performs encryption using a shift substitution cipher with a fixed shift value of 13, and returns the ciphertext as a String. It uses the substitute::shift_substitution function, which applies a shift substitution to each character of the message. The shift value is calculated by adding 13 to the index of the character in the standard alphabet (alphabet::STANDARD). The alphabet::STANDARD.modulo function ensures that the resulting index wraps around within the valid range of the alphabet.
+    <br>
+    <br>
+    The decrypt function is identical to the encrypt function. It takes a message as input, performs decryption using the same shift substitution cipher with a shift value of 13, and returns the plaintext as a String.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let message = "HELLO";
+      let ciphertext = encrypt(message);
+      println!("Ciphertext: {}", ciphertext);
+  
+      let decrypted_message = decrypt(&ciphertext);
+      println!("Decrypted message: {}", decrypted_message);
+    }
+  
+  </md>
+
+  <h3 id="scy">Scytale Encryption</h3>
+  <p>
+    The encrypt function takes a message as input, performs encryption using the Scytale cipher, and returns the ciphertext as a Result<String, &'static str>. It first checks if the height of the cylinder is greater than or equal to the length of the message or if the height is 1. In such cases, the message is returned as is (no encryption is performed). Otherwise, the function calculates the width of the cylinder by dividing the length of the message by the height and rounding up to the nearest integer. It then creates a table (a two-dimensional vector) with the specified height and width. The characters of the message are placed on the table by traversing the message and assigning each character to the corresponding position on the table. Finally, the characters are collected from the table, trimming any trailing spaces, and returned as the ciphertext.
+    <br>
+    <br>
+    The decrypt function takes a ciphertext as input, performs decryption using the Scytale cipher, and returns the plaintext as a Result<String, &'static str>. Similar to the encrypt function, it checks if the height of the cylinder is greater than or equal to the length of the ciphertext or if the height is 1. In such cases, the ciphertext is returned as is (no decryption is performed). Otherwise, the function calculates the width of the cylinder based on the ciphertext length and height. It creates a table and assigns the characters of the ciphertext to the corresponding positions on the table. Then, the plaintext is reconstructed by reading the characters column by column from the table until all columns are empty. The resulting plaintext is trimmed, removing any trailing spaces, and returned.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let scytale = Scytale::new(4); // Create a Scytale cipher with height 4
+  
+      let plaintext = "HELLO WORLD";
+      let ciphertext = scytale.encrypt(plaintext).unwrap();
+      println!("Ciphertext: {}", ciphertext);
+  
+      let decrypted_text = scytale.decrypt(&ciphertext).unwrap();
+      println!("Decrypted text: {}", decrypted_text);
+    }
+  
+  </md>
+
+  <h3 id="vig">Vigenere Encryption</h3>
+  <p>
+    The encrypt function takes a message as input, performs encryption using the Vigenere cipher, and returns the ciphertext as a Result<String, &'static str>. It uses the key_substitution function from the substitute module to perform the substitution. The key_substitution function takes the message, a keystream generated from the cyclic keying of the key, and a closure that specifies the substitution operation. In this case, the closure performs modular addition between the plaintext character index (mi) and the keystream character index (ki) using the standard alphabet modulo operation. The resulting ciphertext is returned.
+    <br>
+    <br>
+    The decrypt function takes a ciphertext as input, performs decryption using the Vigenere cipher, and returns the plaintext as a Result<String, &'static str>. It uses the key_substitution function in a similar way as the encrypt function, but the closure performs modular subtraction between the ciphertext character index (ci) and the keystream character index (ki) using the standard alphabet modulo operation. The resulting plaintext is returned.
+  </p>
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let vigenere = Vigenere::new("KEY".to_string()); // Create a Vigenere cipher with the key "KEY"
+  
+      let plaintext = "HELLO WORLD";
+      let ciphertext = vigenere.encrypt(plaintext).unwrap();
+      println!("Ciphertext: {}", ciphertext);
+  
+      let decrypted_text = vigenere.decrypt(&ciphertext).unwrap();
+      println!("Decrypted text: {}", decrypted_text);
+    }
+  
+  </md>
+
+  <h3 id="argon">Argon2 Macros Encryption</h3>
+  <p>
+    The macro argon2_module is used to generate the functions and constants based on the provided parameters. Here's a breakdown of the macro parameters:
+    <br>
+    <br>
+    $pwhash_name: The name of the function used to derive a key from a password and salt.
+    <br>
+    <br>
+    $pwhash_str_name: The name of the function used to hash a password and produce a string representation.
+    <br>
+    <br>
+    $pwhash_str_verify_name: The name of the function used to verify a password against a hashed string.
+    <br>
+    <br>
+    $saltbytes: The number of bytes for the salt.
+    <br>
+    <br>
+    $hashedpasswordbytes: The number of bytes for the hashed password.
+    <br>
+    <br>
+    $strprefix: The prefix used in the string representation of the hashed password.
+    <br>
+    <br>
+    $opslimit_interative, $opslimit_moderate, $opslimit_sensitive: The values for interactive, moderate, and sensitive operations limits, respectively.
+    <br>
+    <br>
+    $memlimit_interative, $memlimit_moderate, $memlimit_sensitive: The values for interactive, moderate, and sensitive memory limits, respectively.
+    <br>
+    <br>
+    $variant: The variant value for Argon2.
+    <br>
+    <br>
+    The generated code includes the following:
+    <br>
+    <br>
+    Constants: SALTBYTES, HASHEDPASSWORDBYTES, STRPREFIX, OPSLIMIT_INTERACTIVE, MEMLIMIT_INTERACTIVE, OPSLIMIT_MODERATE, MEMLIMIT_MODERATE, OPSLIMIT_SENSITIVE, MEMLIMIT_SENSITIVE, and VARIANT. These constants represent the various parameters and limits for the Argon2 algorithm.
+    <br>
+    <br>
+    Structs: OpsLimit and MemLimit. These are newtype structs that wrap the underlying usize values for operations limit and memory limit, respectively.
+    <br>
+    <br>
+    Types: Salt and HashedPassword. These are newtype wrappers for the byte arrays used to store the salt and hashed password, respectively.
+    <br>
+    <br>
+    Functions:
+    <br>
+    <br>
+    gen_salt: Generates a random salt value of SALTBYTES length and returns it as a Salt object.
+    <br>
+    <br>
+    derive_key: Derives a key from a password and salt using the Argon2 algorithm. It takes a mutable key buffer, the passwd (password) byte slice, the Salt, OpsLimit, and MemLimit as input. It returns a Result containing a reference to the derived key on success, or an empty () on failure.
+    <br>
+    <br>
+    pwhash: Hashes a password using the Argon2 algorithm and returns the hashed password as a HashedPassword object. It takes the passwd (password) byte slice, OpsLimit, and MemLimit as input. It returns a Result containing the hashed password on success, or an empty () on failure.
+    <br>
+    <br>
+    pwhash_verify: Verifies a password against a hashed password string. It takes a reference to the HashedPassword and the passwd (password) byte slice as input. It returns a bool indicating whether the password is verified (true) or not (false).
+  <h4>Example Usage</h3>
+  <md>
+      
+    argon2_module!(
+      argon2_derive_key,
+      argon2_hash_encoded,
+      argon2_hash_verify,
+      16,
+      32,
+      b"$argon2",
+      3,
+      4,
+      5,
+      65536,
+      131072,
+      262144,
+      19
+    );
+  
+    fn main() {
+      let password = "mysecretpassword".as_bytes();
+      
+      // Generate a random salt
+      let salt = gen_salt();
+      
+      // Derive a key from the password and salt
+      let mut key = [0u8; HASHEDPASSWORDBYTES];
+      let result = derive_key(&mut key, password, &salt, OPSLIMIT_INTERACTIVE, MEMLIMIT_INTERACTIVE);
+      
+      match result {
+          Ok(derived_key) => {
+              println!("Derived key: {:?}", derived_key);
+              
+              // Hash the password
+              let hashed_password = pwhash(password, OPSLIMIT_INTERACTIVE, MEMLIMIT_INTERACTIVE);
+              
+              match hashed_password {
+                  Ok(hashed) => {
+                      println!("Hashed password: {:?}", hashed);
+                      
+                      // Verify a password against a hashed password
+                      let verified = pwhash_verify(&hashed, password);
+                      
+                      if verified {
+                          println!("Password verification succeeded.");
+                      } else {
+                          println!("Password verification failed.");
+                      }
+                  },
+                  Err(_) => {
+                      println!("Error hashing the password.");
+                  }
+              }
+          },
+          Err(_) => {
+              println!("Error deriving the key.");
+          }
+      }
+    }
+  
+  </md>
+
+
+
+  <h3 id="bcr">Bcrypt Encryption</h3>
+  <p>
+    The hash_password function takes a byte slice (&[u8]) as input and returns a Result containing either the hashed password as a String or an error of type bcrypt::Error. It generates a random salt, hashes the password using bcrypt with the specified cost, encodes the salt and hashed password using Base64, and returns the formatted string.
+    <br>
+    <br>
+    The verify_password function takes a byte slice (&[u8]) representing a password and a string (&str) containing the hashed password. It returns a Result containing either a boolean indicating whether the password is valid or an error of type bcrypt::Error. It parses the hashed password string, extracts the cost, salt, and decoded password, and compares the result of hashing the input password with the decoded password.
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let password = "my_password".as_bytes();
+  
+      // Hash the password
+      let hashed_password = match hash_password(password) {
+          Ok(hashed) => hashed,
+          Err(err) => {
+              println!("Error hashing password: {}", err);
+              return;
+          }
+      };
+  
+      println!("Hashed password: {}", hashed_password);
+  
+      // Verify the password
+      let is_password_valid = match verify_password(password, &hashed_password) {
+          Ok(valid) => valid,
+          Err(err) => {
+              println!("Error verifying password: {}", err);
+              return;
+          }
+      };
+  
+      if is_password_valid {
+          println!("Password is valid!");
+      } else {
+          println!("Password is invalid!");
+      }
+    }
+  
+  </md>
+
+
+  <h3 id="ds">DS Encryption</h3>
+  <p>
+    The function calculates the number of blocks required based on the desired key length. It then iterates over each block, computes the HMAC of the password and block using the hmac function, and XORs the resulting HMAC with the salt. This result is then used as the input for subsequent iterations.
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let password = "my_password".as_bytes();
+      let salt = "mysalt".as_bytes();
+      let iterations = 10000;
+      let dk_len = 32;
+  
+      let derived_key = pbkdf2(password, salt, iterations, dk_len);
+  
+      println!("Derived key: {:?}", derived_key);
+    }
+  
+  </md>
+
+  <h3 id="hmac">Hash Macros Encryption</h3>
+  <p>
+    The macro takes several parameters that define the hash algorithm:
+    <br>
+    <br>
+    $hash_name: The name of the hash algorithm function.
+    <br>
+    <br>
+    $hash_state: The name of the hash state struct.
+    <br>
+    <br>
+    $hash_init: The name of the function to initialize the hash state.
+    <br>
+    <br>
+    $hash_update: The name of the function to update the hash state with data.
+    <br>
+    <br>
+    $hash_final: The name of the function to finalize the hash and produce the digest.
+    <br>
+    <br>
+    $hashbytes: The number of bytes in the hash digest.
+    <br>
+    <br>
+    $blockbytes: The number of bytes in a block of data processed by the hash algorithm.
+    <br>
+    <br>
+    The macro generates the following items:
+    <br>
+    <br>
+    Digest: A newtype struct that represents the hash digest. It has a constant size equal to $hashbytes.
+    <br>
+    <br>
+    hash: A function that takes a byte slice m as input and returns a Digest representing the hash of m.
+    <br>
+    <br>
+    State: A struct representing the hash state. It has methods for initialization, updating with data, and finalizing the hash.
+    <br>
+    <br>
+    impl blocks for the State struct, including implementations of new, update, and finalize.
+    <br>
+    <br>
+    impl block for Default trait, providing a default implementation for creating a new State.
+    <br>
+    <br>
+    Optional test modules for testing the hash algorithm and serialization (if the serde feature is enabled).
+    <br>
+    <br>
+    Optional benchmark module for benchmarking the hash algorithm (if the benchmarks feature is enabled).
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let message = b"Hello, world!";
+  
+      // Hash the message
+      let digest = hash(message);
+      println!("Hash digest: {:?}", digest);
+  
+      // Create a hash state and update it with data
+      let mut state = State::new();
+      state.update(message);
+      let final_digest = state.finalize();
+      println!("Final hash digest: {:?}", final_digest);
+    }
+  
+  </md>
+
+  <h3 id="hmac2">Hmac Encryption</h3>
+  <p>
+    The Hmac is just another approach of hash macros encryption.
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let key = b"my_key";
+      let message = b"Hello, world!";
+  
+      let hash_func = |data: &[u8]| -> Vec<u8> {
+          let mut hasher = Sha256::new();
+          hasher.update(data);
+          hasher.finalize().to_vec()
+      };
+  
+      let hmac_result = hmac(&hash_func, key, message);
+      println!("HMAC result: {:?}", hmac_result);
+    }
+  
+  </md>
+
+  <h3 id="kex">Keyexchange Encryption</h3>
+  <p>
+    Keyexchange is another implementation of Diffie Hellman Encryption.
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      // Create two DiffieHellman instances
+      let mut alice = DiffieHellman::new();
+      let mut bob = DiffieHellman::new();
+  
+      // Alice generates her public key
+      let alice_public_key = alice.generate_public_key();
+  
+      // Bob generates his public key
+      let bob_public_key = bob.generate_public_key();
+  
+      // Alice computes the shared secret using Bob's public key
+      let alice_shared_secret = alice.compute_shared_secret(bob_public_key);
+  
+      // Bob computes the shared secret using Alice's public key
+      let bob_shared_secret = bob.compute_shared_secret(alice_public_key);
+  
+      // The shared secrets should be equal
+      assert_eq!(alice_shared_secret, bob_shared_secret);
+  
+      // Print the shared secret
+      println!("Shared Secret: {}", alice_shared_secret);
+    }
+  
+  </md>
+
+  <h3 id="hmac4">MAC Encryption</h3>
+  <p>
+    Here is another implementation of Hmac encryption which is an another implementation of Hash Macros Encryption.
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let key = b"secret_key";
+      let message = b"Hello, world!";
+      let hmac_result = hmac(key, message);
+      println!("HMAC: {:?}", hmac_result);
+    }
+  
+  </md>
+
+  <h3 id="md5">MD5 Encryption</h3>
+  <p>
+    The md5 function processes the input in 64-byte chunks, performs the MD5 rounds according to the MD5 algorithm, and updates the state with the computed values. Finally, it converts the state into a 16-byte array as the final hash result.
+  <h4>Example Usage</h3>
+  <md>
+      
+    fn main() {
+      let input = b"Hello, world!";
+      let hash = md5(input);
+      println!("MD5 Hash: {:02X?}", hash);
+    }
+  
+  </md>
+
+  <h3 id="scr">Scrypt Encryption</h3>
+  <p>
+    To hash a password, you can call the hash_password function and provide the password as a byte slice. The function will return a Result where the Ok variant contains the hashed password as a String. If an error occurs during the hashing process, such as invalid parameters, a CryptoError will be returned.
+  <h4>Example Usage</h3>
+  <md>
+       
+    fn main() {
+      let password = b"my_password";
+      let hashed_password = hash_password(password).unwrap();
+      println!("Hashed Password: {}", hashed_password);
+    }
+
+    fn main() {
+      let password = b"my_password";
+      let hashed_password = "$scrypt$0$14$8$1$asdfghjkl1234567890";
+      let is_valid = verify_password(password, hashed_password);
+      println!("Password is valid: {}", is_valid);
+    }
+    
+  
+  </md>
+
+  <h3 id="comb">Scryptsalsa208sha256 Encryption</h3>
+  <p>
+    The gen_salt function generates a random salt using the randombytes_into function from the randombytes crate.
+    <br>
+    <br>
+    <br>
+    <br>
+    The derive_key function is used to derive a key from a password and salt using the scryptsalsa208sha256 algorithm. It takes the key buffer, password, salt, operational limit, and memory limit as parameters. The function modifies the key buffer in place and returns a result indicating success or failure.
+    <br>
+    <br>
+    The derive_key_interactive and derive_key_sensitive functions are convenience wrappers around derive_key with predefined operational and memory limits for interactive and sensitive scenarios, respectively.
+    <br>
+    <br>
+    The pwhash function generates a hashed password from a password using the scryptsalsa208sha256 algorithm. It takes the password, operational limit, and memory limit as parameters and returns a result containing the hashed password.
+    <br>
+    <br>
+    The pwhash_interactive and pwhash_sensitive functions are convenience wrappers around pwhash with predefined operational and memory limits for interactive and sensitive scenarios, respectively.
+    <br>
+    <br>
+    The pwhash_verify function is used to verify a password against a hashed password. It takes the hashed password and the password to be verified as parameters and returns a boolean indicating whether the verification succeeded or not.
+  <h4>Example Usage</h3>
+  <md>
+       
+    fn main() {
+      let password = b"my_password";
+  
+      // Generate a random salt
+      let salt = gen_salt();
+  
+      // Derive a key from the password and salt
+      let mut derived_key = [0u8; 32];
+      derive_key_interactive(&mut derived_key, password, &salt).unwrap();
+  
+      // Perform cryptographic operations using the derived key
+      // ...
+  
+      // Verify a password
+      let hashed_password = pwhash(password, OPSLIMIT_INTERACTIVE, MEMLIMIT_INTERACTIVE).unwrap();
+      let is_valid = pwhash_verify(&hashed_password, password);
+      println!("Password is valid: {}", is_valid);
+  }
+    
+  
+  </md>
+
+  <h3 id="sha1">SHA1 Encryption</h3>
+  <p>
+    The sha1 function is the main entry point for calculating the SHA-1 hash. It takes an input byte slice and returns a 20-byte array representing the hash value. It follows the SHA-1 algorithm steps to process the input and update the internal state accordingly.
+    <br>
+    <br>
+    The pad_message function is used to add padding to the input message according to the SHA-1 specifications. It appends the bit 1 to the message, followed by zero or more 0 bytes to reach a certain length, and finally appends the original message length in bits. The resulting padded message is returned as a Vec<u8>.
+    <br>
+    <br>
+    The create_word_array function converts a block of bytes into an array of 32-bit words, as required by the SHA-1 algorithm. It first converts each 4-byte chunk of the block into a u32 value using the from_be_bytes function. Then, it applies a transformation to generate the remaining words based on the previous words in the array.
+  <h4>Example Usage</h3>
+  <md>
+       
+    fn main() {
+      let input = b"Hello, world!";
+      let hash = sha1(input);
+  
+      println!("SHA-1 hash: {:?}", hash);
+    }
+  
+  </md>
+
+  <h3 id="sha512">SHA512 Encryption</h3>
+  <p>
+    sha512: This function takes an input byte slice and returns a 64-byte array representing the SHA-512 hash of the input. It initializes the state with the initial hash values, pads the input message, and processes the message in blocks using the SHA-512 compression function.
+    <br>
+    <br>
+    pad_message: This function takes an input byte slice and returns a padded byte vector according to the SHA-512 padding scheme. It adds the bit 0x80 to mark the end of the message, appends padding bytes to reach a multiple of the block size, and appends the bit length of the original message.
+    <br>
+    <br>
+    create_word_array: This function takes a block (128 bytes) of input and returns an array of 80 64-bit words. It converts each 8-byte chunk of the block into a 64-bit word using big-endian byte order. It then expands the 16 initial words into the remaining 64 words using a specific formula.
+  <h4>Example Usage</h3>
+  <md>
+       
+    fn main() {
+      let input = b"Hello, world!";
+      let hash = sha512(input);
+      println!("SHA-512 hash: {:?}", hash);
+    }
+  
+  </md>
+
+  <h3 id="sip">SipHash24 Encryption</h3>
+  <p>
+    The gen_key function generates a random key of length KEYBYTES using the randombytes_into function from the randombytes crate.
+    <br>
+    <br>
+    The shorthash function takes a message m and a key k as input and returns the hash of the message using the SipHash-2-4 algorithm. It uses the ffi::crypto_shorthash_siphash24 function from the ffi crate to perform the actual hash computation.
+  <h4>Example Usage</h3>
+  <md>
+       
+    fn main() {
+      // Generate a random key
+      let key = gen_key();
+  
+      // Compute the hash of a message
+      let message = b"Hello, world!";
+      let hash = shorthash(message, &key);
+  
+      // Print the hash
+      println!("Hash: {:?}", hash);
+    }
+  
+  </md>
+
+
+</article>
+        
+
+<footer>
+  <p>Cryptode is created by <a href="https://github.com/enginestein/">Arya Praneil Pritesh</a> and is licensed under the GPL license.</p>
+  <small>© 2023 Cryptode</small>
+  <address>aryapraneil@gmail.com</address>
+</footer>
+          
+          
+  
+<script>
+  $('a[href^="#"]').click(function(e) {
+    e.preventDefault();
+    $(window).stop(true).scrollTo(this.hash, {duration:500, interrupt:false});
+  });
+  </script>
+   
+ <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag-commonmark.js"></script>   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>  
