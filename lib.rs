@@ -53,3 +53,7 @@ pub use self::theoretical_rot::*;
 pub use self::transposition::*;
 pub use self::utils::*;
 pub use self::xor::*;
+
+pub mod Cryptode {
+    pub use super::*;
+}
