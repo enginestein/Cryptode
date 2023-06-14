@@ -17,3 +17,23 @@ pub mod theoretical_rot;
 pub mod transposition;
 pub mod utils;
 pub mod xor;
+
+pub use crate::aes::*;
+pub use crate::another_rot13::*;
+pub use crate::blake2b::*;
+pub use crate::chacha::*;
+pub use crate::diffie_hellman::*;
+pub use crate::encryption::*;
+pub use crate::kerninghan::*;
+pub use crate::morse_code::*;
+pub use crate::polybius::*;
+pub use crate::rail_fence::*;
+pub use crate::rot13::*;
+pub use crate::salsa::*;
+pub use crate::sha3::*;
+pub use crate::sha256;::*
+pub use crate::tea::*;
+pub use crate::theoretical_rot::*;
+pub use crate::transposition::*;
+pub use crate::utils::*;
+pub use crate::xor::*;
