@@ -5,7 +5,7 @@ Just use in your Cargo.toml
 
 ```rust
 [dependencies]
-cryptode = { git = "https://github.com/enginestein/Cryptode.git" }
+Cryptode = { git = "https://github.com/enginestein/Cryptode.git" }
 ```
 
 And start coding!
