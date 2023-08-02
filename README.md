@@ -12,14 +12,18 @@ By incorporating Cryptode into your projects, you can confidently handle sensiti
 
 Stay at the forefront of data security with Cryptode. Explore its vast array of cryptographic functions and unlock the power of secure communication and information protection in your applications.
 
-To install:
+# Installation
+
+Add following line in your `Cargo.toml` file
 
 ```rust
 [dependencies]
 Cryptode = { git = "https://github.com/enginestein/Cryptode.git" }
 ```
 
-And start coding!
+# Usage
+
+
 
 Documentation is available [here](https://enginestein.github.io/Cryptode/)
 
