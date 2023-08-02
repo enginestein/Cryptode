@@ -23,7 +23,29 @@ Cryptode = { git = "https://github.com/enginestein/Cryptode.git" }
 
 # Usage
 
+Import Cryptode in following syntax:
 
+```rust
+extern crate Cryptode;
+use Cryptode::FileName:::FunctionName;
+```
+
+For example, here is example encoding in `blake2b` encryption system:
+
+```rust
+extern crate Cryptode;
+use Cryptode::blake2b::blake2b;
+
+fn main() {
+let message = b"Hello, World!";
+let key = b"SecretKey";
+let output_size = 32; // Output size in bytes
+
+let hash = blake2b(message, key, output_size);
+
+println!("Hash: {:?}", hash);
+}
+```
 
 Documentation is available [here](https://enginestein.github.io/Cryptode/)
 
