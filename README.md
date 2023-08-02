@@ -27,7 +27,7 @@ Import Cryptode in following syntax:
 
 ```rust
 extern crate Cryptode;
-use Cryptode::FileName:::FunctionName;
+use Cryptode::FileName::FunctionName;
 ```
 
 For example, here is example encoding in `blake2b` encryption system:
