@@ -1,5 +1,7 @@
 # Cryptode
 
+[![Downloads](https://static.pepy.tech/badge/cryptode)](https://pepy.tech/project/cryptode)
+
 Introducing Cryptode: A Comprehensive Cryptography Framework
 
 Cryptode is a state-of-the-art cryptography framework originally developed in pure Rust exclusively for the Rust programming language. However, it has now expanded its horizons and is available as an API for other programming languages, including Python and more.
